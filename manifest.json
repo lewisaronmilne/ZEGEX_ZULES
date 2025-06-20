@@ -1,0 +1,46 @@
+{
+	"manifest_version": 2,
+	"name": "ZEGEX ZULES",
+	"version": "0.6",
+
+	"browser_specific_settings": 
+	{
+		"gecko": 
+		{
+			"id": "ZEGEXZULES@LewisAronMilne"
+		}
+	},
+
+	"description": "Because REGEX RULES would be a pain to search for.",
+
+	"icons":
+	{
+		"48": "img/icon48.png"
+	},
+
+	"options_ui": 
+	{
+		"page": "prefs.html",
+		"open_in_tab": true
+	},
+
+	"browser_action": 
+	{
+		"default_icon": 
+		{
+			"48": "img/icon48.png"
+		}
+	},
+
+	"permissions": 
+	[
+		"tabs", 
+		"storage",
+		"<all_urls>"
+	],
+
+	"background": 
+	{
+		"scripts": ["background.js", "common.js"]
+	}
+}

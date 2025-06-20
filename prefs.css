@@ -1,0 +1,97 @@
+:root 
+{
+    --max-row-height: 200px;
+    --default-font: 13px "consolas";
+    --row-margin: 4px;
+}
+.textDiv, .CodeMirror, input[type="text"] { font: var(--default-font); }
+input[type="text"], input[type="submit"] { border: none transparent; }
+input[type="submit"] { background-color: #CACACA; }
+input[type="submit"]:hover { background-color: #B0B0D8; }
+
+body { background-color: #8A8; margin: 0px; }
+#outer
+{
+    width: 1400px;
+    margin: auto;
+}
+#outer > * { margin-top: 0px; }
+
+#banner
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0px;
+}
+#banner > * { margin: 0px; }
+#banner > * + * { margin-left: 15px; }
+#banner > img { height: 36px; width: 36px; }
+#banner > .textDiv { color: white; font: 48px "times new roman"; line-height: 48px; padding-bottom: 1px; }
+
+#rows { display: flex; flex-direction: column; padding: calc(var(--row-margin)*1.5) 2px; }
+.row
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0px;
+    position: relative;
+}
+#rows > * + * { margin-top: var(--row-margin); }
+
+.row > * { flex: none; margin: 0px; }
+.row > * + * { margin-left: var(--row-margin); }
+
+.regexMirror .CodeMirror-scroll { max-height: var(--max-row-height); }
+.CodeMirror:not(.regexMirror) .CodeMirror-scroll { max-height: calc(var(--max-row-height) - 27px); }
+
+.CodeMirror { height: auto; font: var(--default-font); }
+.CodeMirror pre.CodeMirror-placeholder { color: #999; }
+
+.regexMirror { width: 500px; }
+
+.rightDiv { flex: 1 0 0px; overflow-x: hidden; }
+.rightDiv > * + * { margin-top: var(--row-margin); }
+
+.rightDiv:not([under_bar="js"]) .javascriptMirror,
+.rightDiv:not([under_bar="css"]) .cssMirror { display: none; } 
+
+.rightDiv[under_bar="js"] .jsBtn,
+.rightDiv[under_bar="css"] .cssBtn { background-color: #B0B0D8; }
+
+.hBar, .hBar > div
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.hBar > div { height: 100%; }
+.hBar * { flex: none; margin: 0px; }
+.hBar > .stretch { flex: 1 0 0px; }
+.hBar > * + * { margin-left: 15px; }
+.hBar > div > * + * { margin-left: 5px; }
+
+#topBar, #bottomBar, .rowBar { height: 23px; }
+#topBar, #bottomBar { background-color: #6C8C6C; padding: 4px 5px; border-radius: 4px; }
+.rowBar { background-color: #EEE; padding: 0px 5px; }
+
+#topBar .textDiv, #bottomBar .textDiv  { color: white; }
+.rowBar .textDiv { color: black; }
+
+#topBar input[type="submit"], #bottomBar input[type="submit"] { height: 100%; }
+.rowBar input[type="submit"] { height: calc(100% - 6px); padding-bottom: 1px; }
+
+#topBar input[type="text"], #bottomBar input[type="text"] { height: calc(100% - 2px); }
+
+.jsBtn, .cssBtn { padding-left: 5px; padding-right: 5px; }
+.upBtn, .downBtn { padding-left: 2px; padding-right: 2px; }
+
+#maxRowHeight { width: 30px; direction: rtl; }
+#passwordLength { width: 30px; }
+#passwordInput { width: 150px; }
+
+#passwordDiv[no_password] { display: none; }
+
+#scrollExtendZone { height: calc(100vh - 100px); }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ZEGEX ZULES</title>
+		<link rel="shortcut icon" type="image/png" href="img/icon.png"/>
+
+		<link rel="stylesheet" href="lib/codemirror.css">
+		<script src="lib/codemirror.js" defer></script>
+		<script src="lib/codemirror_javascript.js" defer></script>
+		<script src="lib/codemirror_css.js" defer></script>
+		<script src="lib/codemirror_placeholder.js" defer></script>
+
+		<link rel="stylesheet" href="prefs.css">
+		<script src="common.js" defer></script>
+		<script src="prefs.js" defer></script>
+	</head>
+
+	<body>
+		<div id="outer">
+			<div id="banner">
+				<img src="img/icon.png"/>
+				<div class="textDiv">ZEGEX ZULES</div>
+				<img src="img/icon.png"/>
+			</div>
+
+			<div id="topBar" class="hBar">
+				<div>
+					<input id="addonsLockout" type="checkbox">
+					<div class="textDiv">Addons Lockout</div>
+				</div>
+				<div>
+					<input id="maxRowHeight" type="text">
+					<input id="setMaxRowHeight" type="submit" value="Set Max Row Height">
+				</div>
+				<div>
+					<div class="textDiv">Password Length:</div>
+					<input id="passwordLength" type="text">
+				</div>
+				<div class="stretch"></div>
+			</div>
+
+			<div id="rows"></div>
+			
+			<div id="bottomBar" class="hBar">
+				<div>
+					<input id="addRowBtn" type="submit" value="Add Row">
+					<input id="saveBtn" type="submit" value="Save">
+				</div>
+				<div id="passwordDiv">
+					<div class="textDiv">Password:</div>
+					<input id="passwordInput" type="text" autocomplete="off">
+					<div class="textDiv">&lt;-</div>
+					<img id="passwordImage">
+				</div>
+				<div class="stretch"></div>
+				<div>
+					<input id="syncBtn" type="submit" value="Sync">
+				</div>
+			</div>
+			<div id="scrollExtendZone">
+		</div>
+	</body>
+</html>

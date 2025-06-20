@@ -1,0 +1,42 @@
+body { background-color: #8A8; }
+#outer
+{
+    background-color: #8A8;
+    margin-top: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#outer > * + * { margin-top: 30px; }
+
+#banner 
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+}
+#banner > * + * { margin-left: 20px; }
+#banner > .textDiv
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+    font-size: 85px;
+}
+#banner > img { height: 60px;  }
+
+#siteDiv
+{
+    background-color: #6C8C6C;
+    width: 600px;
+    padding: 10px;
+    border-radius: 5px;
+
+    font-family: "consolas"; 
+    font-size: 15px;
+    line-height: 15px;
+    overflow-wrap: anywhere;
+}
+#siteLink { color: white; }
