@@ -1,4 +1,4 @@
-# ZEGEX_ZULES
+# ZEGEX ZULES
 A Firefox extension that allows the user to apply certain settings to webpages selected via RegEx.
 
 ![prefs page](img/prefs_page.png)
